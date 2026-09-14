@@ -139,81 +139,62 @@ button {
 ========================= */
 
 .hero {
-    min-height: 90vh;
-    padding: 100px 7%;
+    min-height: 85vh;
+    padding: 80px 7%;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
     background:
         linear-gradient(
-            90deg,
-            rgba(17,17,15,0.95),
-            rgba(17,17,15,0.55)
+            rgba(17, 17, 17, 0.65),
+            rgba(17, 17, 17, 0.85)
         ),
-        url("img/cafe.jpg") center/cover;
+        url("img/cafe.jpg") center/cover no-repeat;
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 700px;
 }
 
-.hero-small {
-    color: #a8b77b;
-    font-size: 12px;
-    letter-spacing: 4px;
+.hero-subtitle {
+    color: #c89b3c;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-.hero h2 {
-    font-size: clamp(55px, 9vw, 110px);
-    line-height: 1;
-    margin: 25px 0;
+.hero h1 {
+    color: #ffffff;
+    font-size: clamp(50px, 9vw, 90px);
+    line-height: 1.1;
+    margin: 10px 0 25px;
     font-weight: 800;
 }
 
-.hero h2 span {
-    color: #a8b77b;
-}
-
-.hero p {
-    color: #c8c0b4;
+.hero-text {
+    color: #dddddd;
     font-size: 18px;
-    margin-bottom: 35px;
+    line-height: 1.9;
+    margin-bottom: 30px;
 }
 
-.main-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
-    padding: 14px 28px;
-    background: #a8b77b;
-    color: #11110f;
-    font-weight: bold;
-    border-radius: 3px;
+.hero-btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #c89b3c;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 700;
     transition: 0.3s;
 }
 
-.main-btn:hover {
+.hero-btn:hover {
     transform: translateY(-3px);
-    background: #c0ce93;
+    opacity: 0.9;
 }
-
-.main-btn span {
-    font-size: 20px;
-}
-
-.hero-side-text {
-    position: absolute;
-    left: 4%;
-    top: 50%;
-    transform: translateY(-50%);
-    writing-mode: vertical-rl;
-    color: rgba(255,255,255,0.12);
-    letter-spacing: 7px;
-    font-size: 13px;
-}
-
-
 /* =========================
    SECTION TITLE
 ========================= */
@@ -237,110 +218,85 @@ button {
     color: #918b81;
 }
 
-
 /* =========================
    MENU
 ========================= */
 
-.menu-section {
-    padding: 110px 7%;
+#menu {
+    padding: 100px 7%;
     background: #151512;
+    box-sizing: border-box;
 }
 
-.menu-categories {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+.section-title {
+    text-align: center;
     margin-bottom: 45px;
-    flex-wrap: wrap;
 }
 
-.category {
-    background: transparent;
-    border: 1px solid #393932;
-    color: #c8c0b4;
-    padding: 9px 22px;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: 0.3s;
+.section-title p {
+    color: #c89b3c;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
-.category:hover,
-.category.active {
-    background: #a8b77b;
-    border-color: #a8b77b;
-    color: #11110f;
+.section-title h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
 }
 
-.menu-items {
+.menu-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    gap: 25px;
 }
 
 .menu-card {
     background: #1c1c18;
     border: 1px solid #2e2e28;
-    padding: 15px;
-    transition: 0.4s;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
 .menu-card:hover {
     transform: translateY(-8px);
-    border-color: #79875a;
+    border-color: #c89b3c;
 }
 
-.product-image {
+.menu-card img {
     width: 100%;
     height: 230px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.menu-card:hover .product-image img {
-    transform: scale(1.08);
-}
-
-.product-info {
-    padding: 18px 5px;
-}
-
-.product-info h3 {
-    font-size: 21px;
-    margin-bottom: 5px;
-}
-
-.product-info p {
-    color: #918b81;
-    font-size: 13px;
-    min-height: 50px;
-}
-
-.product-info strong {
     display: block;
-    color: #a8b77b;
-    margin-top: 12px;
+    object-fit: cover;
+    transition: 0.4s;
 }
 
-.add-cart {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #44443b;
-    background: transparent;
-    color: #eee8de;
-    cursor: pointer;
-    transition: 0.3s;
+.menu-card:hover img {
+    transform: scale(1.05);
 }
 
-.add-cart:hover {
-    background: #a8b77b;
-    color: #11110f;
+.menu-info {
+    padding: 20px;
+}
+
+.menu-info h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin: 0 0 10px;
+}
+
+.menu-info p {
+    color: #aaa49a;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+.menu-info span {
+    display: block;
+    color: #c89b3c;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 
@@ -348,61 +304,77 @@ button {
    ABOUT
 ========================= */
 
-.about-section {
-    padding: 110px 7%;
+.about {
+    padding: 100px 7%;
+    background: #111111;
+    box-sizing: border-box;
+}
+
+.about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 60px;
     align-items: center;
 }
 
 .about-image {
-    height: 550px;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .about-image img {
     width: 100%;
-    height: 100%;
+    height: 450px;
+    display: block;
     object-fit: cover;
+    transition: 0.4s;
 }
 
-.section-label {
-    color: #a8b77b;
-    font-size: 13px;
+.about-image img:hover {
+    transform: scale(1.03);
 }
 
-.about-content h2 {
-    font-size: 50px;
-    line-height: 1.2;
-    margin: 20px 0;
+.about-text {
+    max-width: 600px;
 }
 
-.about-content h2 span {
-    color: #a8b77b;
+.about-subtitle {
+    color: #c89b3c;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-.about-content p {
-    color: #a7a095;
-    margin-bottom: 18px;
+.about-text h2 {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.4;
+    margin: 0 0 20px;
 }
 
-.outline-btn {
+.about-text p {
+    color: #aaa49a;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.about-btn {
+    display: inline-block;
     margin-top: 15px;
     padding: 12px 25px;
     background: transparent;
-    border: 1px solid #a8b77b;
-    color: #a8b77b;
-    cursor: pointer;
+    border: 1px solid #c89b3c;
+    color: #c89b3c;
+    text-decoration: none;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
-.outline-btn:hover {
-    background: #a8b77b;
-    color: #11110f;
+.about-btn:hover {
+    background: #c89b3c;
+    color: #111111;
 }
-
-
 /* =========================
    FEATURES
 ========================= */
@@ -433,34 +405,33 @@ button {
     font-size: 14px;
 }
 
-
 /* =========================
    GALLERY
 ========================= */
 
-.gallery-section {
-    padding: 110px 7%;
+.gallery-section,
+#gallery {
+    padding: 100px 7%;
     background: #151512;
+    box-sizing: border-box;
 }
 
-.gallery {
+.gallery-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 260px 260px;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
 .gallery-item {
+    height: 280px;
     overflow: hidden;
-}
-
-.gallery-item.large {
-    grid-row: span 2;
+    border-radius: 8px;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     transition: 0.5s;
 }
@@ -637,7 +608,53 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
+/* =========================
+   SERVICES
+========================= */
 
+.services {
+    padding: 100px 7%;
+    background: #111111;
+    box-sizing: border-box;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 30px 22px;
+    text-align: center;
+    background: #1c1c18;
+    border: 1px solid #2e2e28;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #c89b3c;
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #aaa49a;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
 
 /* =========================
    FOOTER
