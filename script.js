@@ -1,220 +1,116 @@
 // =========================
-// MOBILE MENU
+// CAFE OXYGEN - JAVASCRIPT
 // =========================
-
-const menuBtn = document.querySelector(".menu-btn");
-const navbar = document.querySelector(".navbar");
-
-menuBtn.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-});
 
 
 // =========================
-// CLOSE MOBILE MENU
+// SMOOTH SCROLL
 // =========================
 
-const navLinks = document.querySelectorAll(".navbar a");
+const navLinks = document.querySelectorAll('.nav a');
 
 navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        navbar.classList.remove("active");
-    });
-});
+    link.addEventListener('click', function (event) {
 
-
-// =========================
-// CART
-// =========================
-
-const cartBtn = document.querySelector(".cart-btn");
-const cartPanel = document.querySelector(".cart-panel");
-const closeCart = document.querySelector(".close-cart");
-
-cartBtn.addEventListener("click", () => {
-    cartPanel.classList.add("open");
-});
-
-closeCart.addEventListener("click", () => {
-    cartPanel.classList.remove("open");
-});
-
-
-// =========================
-// PRODUCTS
-// =========================
-
-const addButtons = document.querySelectorAll(".add-cart");
-const cartItems = document.querySelector(".cart-items");
-const cartCount = document.querySelector(".cart-count");
-const cartTotal = document.querySelector(".cart-total strong");
-
-let cart = [];
-
-
-// =========================
-// ADD TO CART
-// =========================
-
-addButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const card = button.closest(".menu-card");
-
-        const name = card.querySelector("h3").textContent;
-        const priceText = card.querySelector("strong").textContent;
-
-        const price = parseInt(
-            priceText.replace(/[^0-9]/g, "")
+        const target = document.querySelector(
+            this.getAttribute('href')
         );
 
-        const existingProduct = cart.find(
-            item => item.name === name
-        );
+        if (target) {
+            event.preventDefault();
 
-        if (existingProduct) {
-
-            existingProduct.quantity++;
-
-        } else {
-
-            cart.push({
-                name: name,
-                price: price,
-                quantity: 1
+            target.scrollIntoView({
+                behavior: 'smooth'
             });
-
         }
 
-        updateCart();
-
-        cartPanel.classList.add("open");
-
     });
-
 });
 
 
 // =========================
-// UPDATE CART
+// HERO BUTTON
 // =========================
 
-function updateCart() {
+const heroBtn = document.querySelector('.hero-btn');
 
-    cartItems.innerHTML = "";
+if (heroBtn) {
 
-    if (cart.length === 0) {
+    heroBtn.addEventListener('click', function (event) {
 
-        cartItems.innerHTML = `
-            <p class="empty-cart">
-                سبد خرید شما خالی است.
-            </p>
-        `;
+        const target = document.querySelector(
+            this.getAttribute('href')
+        );
 
+        if (target) {
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+    });
+
+}
+
+
+// =========================
+// ABOUT BUTTON
+// =========================
+
+const aboutBtn = document.querySelector('.about-btn');
+
+if (aboutBtn) {
+
+    aboutBtn.addEventListener('click', function (event) {
+
+        const target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        if (target) {
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+    });
+
+}
+
+
+// =========================
+// HEADER SCROLL EFFECT
+// =========================
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
     } else {
-
-        cart.forEach((item, index) => {
-
-            const itemElement = document.createElement("div");
-
-            itemElement.className = "cart-item";
-
-            itemElement.innerHTML = `
-
-                <div>
-                    <h3>${item.name}</h3>
-
-                    <p>
-                        ${item.price.toLocaleString("fa-IR")} تومان
-                    </p>
-                </div>
-
-                <div class="quantity">
-
-                    <button onclick="changeQuantity(${index}, -1)">
-                        −
-                    </button>
-
-                    <span>
-                        ${item.quantity}
-                    </span>
-
-                    <button onclick="changeQuantity(${index}, 1)">
-                        +
-                    </button>
-
-                </div>
-
-            `;
-
-            cartItems.appendChild(itemElement);
-
-        });
-
+        header.classList.remove('scrolled');
     }
 
-
-    // تعداد کل محصولات
-
-    const totalQuantity = cart.reduce(
-        (total, item) => total + item.quantity,
-        0
-    );
-
-    cartCount.textContent =
-        totalQuantity.toLocaleString("fa-IR");
-
-
-    // قیمت کل
-
-    const totalPrice = cart.reduce(
-        (total, item) =>
-            total + (item.price * item.quantity),
-        0
-    );
-
-    cartTotal.textContent =
-        totalPrice.toLocaleString("fa-IR") + " تومان";
-
-}
+});
 
 
 // =========================
-// CHANGE QUANTITY
+// GALLERY IMAGE EFFECT
 // =========================
 
-function changeQuantity(index, amount) {
+const galleryImages =
+    document.querySelectorAll('.gallery-item img');
 
-    cart[index].quantity += amount;
+galleryImages.forEach(image => {
 
-    if (cart[index].quantity <= 0) {
+    image.addEventListener('click', () => {
 
-        cart.splice(index, 1);
-
-    }
-
-    updateCart();
-
-}
-
-
-// =========================
-// MENU CATEGORY
-// =========================
-
-const categories =
-    document.querySelectorAll(".category");
-
-categories.forEach(category => {
-
-    category.addEventListener("click", () => {
-
-        categories.forEach(item => {
-            item.classList.remove("active");
-        });
-
-        category.classList.add("active");
+        image.classList.toggle('zoomed');
 
     });
 
@@ -222,21 +118,7 @@ categories.forEach(category => {
 
 
 // =========================
-// DARK MODE BUTTON
+// CONSOLE MESSAGE
 // =========================
 
-const themeBtn =
-    document.querySelector(".theme-btn");
-
-themeBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("light-mode");
-
-});
-
-
-// =========================
-// START
-// =========================
-
-updateCart();
+console.log('Cafe Oxygen website is ready! ☕');
