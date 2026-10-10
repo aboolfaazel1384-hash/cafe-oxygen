@@ -1,663 +1,204 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142b22">
+  <meta name="description" content="کافه اکسیژن؛ تجربه‌ای آرام از قهوه، طعم و لحظه‌های خوب در مسعودیه.">
+  <title>کافه اکسیژن | طعم لحظه‌های خوب</title>
 
-    <title>کافه اکسیژن | Oxygen Cafe</title>
-
-    <meta name="description"
-        content="کافه اکسیژن؛ یک کافه دنج و متفاوت برای قهوه، آرامش و لحظه‌های خوب.">
-
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<header class="header">
-    <div class="logo">
-        ☕ کافه اکسیژن
-    </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="کافه اکسیژن">
+      <span class="brand-mark">O</span>
+      <span class="brand-copy"><strong>اکسیژن</strong><small>OXYGEN CAFE</small></span>
+    </a>
 
-    <nav class="nav">
-        <a href="#home">خانه</a>
-        <a href="#menu">منو</a>
-        <a href="#about">درباره ما</a>
-        <a href="#gallery">گالری</a>
-        <a href="#contact">تماس با ما</a>
+    <button class="menu-toggle" type="button" aria-label="باز کردن منو" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="منوی اصلی">
+      <a href="#home">خانه</a>
+      <a href="#menu">منوی کافه</a>
+      <a href="#about">داستان ما</a>
+      <a href="#gallery">گالری</a>
+      <a href="#contact">تماس</a>
     </nav>
 
-    <a href="#menu" class="order-btn">مشاهده منو</a>
-</header>
-    <!-- ================= HEADER ================= -->
+    <a class="header-cta" href="#menu">منوی کافه <span>↙</span></a>
+  </header>
 
-    <header class="header">
-
-        <div class="logo">
-            <span class="logo-icon">🌿</span>
-            <div>
-                <h1>OXYGEN</h1>
-                <span>CAFE</span>
-            </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-line"></span> یک مکث خوش‌طعم در روز شما</span>
+        <h1>گاهی فقط<br>یک فنجان <em>آرامش</em><br>لازم است.</h1>
+        <p>از عطر اولین جرعه تا آخرین لحظهٔ حضورت؛ اینجا برای کمی آرام‌تر زندگی کردن ساخته شده.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#menu">کشف منوی ما <span>↙</span></a>
+          <a class="text-link" href="#about">داستان اکسیژن <span>←</span></a>
         </div>
+        <div class="hero-note"><span class="note-dot"></span> قهوهٔ خوب، حال خوب، لحظه‌های ماندگار</div>
+      </div>
 
-        <nav class="navbar">
-
-            <a href="#home">خانه</a>
-            <a href="#menu">منو</a>
-            <a href="#about">درباره ما</a>
-            <a href="#gallery">گالری</a>
-            <a href="#contact">تماس</a>
-
-        </nav>
-
-        <div class="header-actions">
-
-            <button class="cart-btn" aria-label="سبد خرید">
-                🛒
-                <span class="cart-count">0</span>
-            </button>
-
-            <button class="theme-btn" aria-label="تغییر حالت">
-                ☾
-            </button>
-
-            <button class="menu-btn" aria-label="منوی موبایل">
-                ☰
-            </button>
-
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="img/skyler-smith-YzCnnBY3zAA-unsplash.jpg" alt="فضای گرم و دلنشین کافه" fetchpriority="high">
         </div>
-
-    </header>
-<section class="hero" id="home">
-    <div class="hero-content">
-        <p class="hero-subtitle">طعم لحظه‌های خوب</p>
-
-        <h1>کافه اکسیژن</h1>
-
-        <p class="hero-text">
-            جایی برای قهوه‌های خاص، آرامش و خاطره‌های خوب.
-        </p>
-
-        <a href="#menu" class="hero-btn">مشاهده منو</a>
-    </div>
-</section>
-
-    <!-- ================= HERO ================= -->
-
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <span class="hero-small">
-                    GOOD COFFEE • BETTER MOOD
-                </span>
-
-                <h2>
-                    کافه
-                    <span>اکسیژن</span>
-                </h2>
-
-                <p>
-                    نفس بکش، قهوه‌ات آماده‌ست.
-                    <br>
-                    یک گوشه دنج برای تو.
-                </p>
-
-                <a href="#menu" class="main-btn">
-                    مشاهده منو
-                    <span>←</span>
-                </a>
-
-            </div>
-
-            <div class="hero-side-text">
-                <span>G</span>
-                <span>O</span>
-                <span>O</span>
-                <span>D</span>
-                <br>
-                <span>C</span>
-                <span>O</span>
-                <span>F</span>
-                <span>F</span>
-                <span>E</span>
-                <span>E</span>
-            </div>
-
-        </section>
-
-<section class="menu" id="menu">
-<div class="section-title">
-    <p>منوی کافه</p>
-    <h2>انتخابی برای هر سلیقه</h2>
-</div>
-
-<div class="menu-container">
-
-    <div class="menu-card">
-        <img src="img/yunshuo-qu-LtnC0fZ_b-Q-unsplash.jpg" alt="اسپرسو">
-        <div class="menu-info">
-            <h3>اسپرسو</h3>
-            <p>قهوه‌ای غلیظ و خوش‌عطر برای شروع یک روز خوب.</p>
-            <span>۸۵,۰۰۰ تومان</span>
+        <div class="image-stamp">
+          <span class="stamp-symbol">✳</span>
+          <span>TAKE A BREATH</span>
+          <small>YOU'RE AT OXYGEN</small>
         </div>
-    </div>
+        <div class="hero-side-label">COFFEE · CALM · CONNECTION</div>
+      </div>
 
-    <div class="menu-card">
-        <img src="img/skyler-smith-YzCnnBY3zAA-unsplash.jpg" alt="لاته">
-        <div class="menu-info">
-            <h3>لاته</h3>
-            <p>ترکیبی نرم و دلچسب از اسپرسو و شیر.</p>
-            <span>۱۲۰,۰۰۰ تومان</span>
+      <div class="hero-bottom">
+        <span>۰۱ / لحظهٔ خودت را پیدا کن</span>
+        <a href="#menu" aria-label="رفتن به منو">↓</a>
+        <span>تهران · مسعودیه</span>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="ویژگی‌های کافه">
+      <span>قهوهٔ باکیفیت</span><i>✳</i>
+      <span>فضایی برای آرامش</span><i>✳</i>
+      <span>لحظه‌هایی برای خودت</span><i>✳</i>
+      <span>OXYGEN EXPERIENCE</span>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE OXYGEN MENU</span>
+          <h2>انتخابی برای <em>حالِ خوب</em></h2>
         </div>
-    </div>
+        <p>از طعم قوی اسپرسو تا لطافت یک لاته؛<br>فنجان بعدی تو منتظرته.</p>
+      </div>
 
-    <div class="menu-card">
-        <img src="img/premium_photo-1674327105074-46dd8319164b.jpeg" alt="آیس کافی">
-        <div class="menu-info">
-            <h3>آیس کافی</h3>
-            <p>قهوه سرد و خنک برای روزهای گرم.</p>
-            <span>۱۳۵,۰۰۰ تومان</span>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-photo">
+            <img src="img/yunshuo-qu-LtnC0fZ_b-Q-unsplash.jpg" alt="قهوه و نوشیدنی گرم" loading="lazy">
+            <span class="menu-number">01</span>
+          </div>
+          <div class="menu-card-info">
+            <div><h3>اسپرسو</h3><p>غلیظ، عمیق و پرانرژی</p></div>
+            <span class="menu-tag">CLASSIC</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-photo">
+            <img src="img/hongjin-wang-xT5i0X893IU-unsplash.jpg" alt="نوشیدنی دست‌ساز کافه" loading="lazy">
+            <span class="menu-number">02</span>
+          </div>
+          <div class="menu-card-info">
+            <div><h3>لاته</h3><p>ترکیبی لطیف از قهوه و شیر</p></div>
+            <span class="menu-tag">SMOOTH</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-photo">
+            <img src="img/premium_photo-1674327105074-46dd8319164b.jpeg" alt="قهوه تازه و خوش‌عطر" loading="lazy">
+            <span class="menu-number">03</span>
+          </div>
+          <div class="menu-card-info">
+            <div><h3>قهوهٔ روز</h3><p>برای شروع یک روز تازه</p></div>
+            <span class="menu-tag">DAILY</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-photo">
+            <img src="img/nguyen-phuc-hau-D556jNpHQ70-unsplash.jpg" alt="فضای سرو قهوه در کافه" loading="lazy">
+            <span class="menu-number">04</span>
+          </div>
+          <div class="menu-card-info">
+            <div><h3>انتخاب باریستا</h3><p>یک تجربهٔ تازه و متفاوت</p></div>
+            <span class="menu-tag">SPECIAL</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="menu-disclaimer">برای اطلاع از نوشیدنی‌های موجود و قیمت‌ها، با کافه تماس بگیرید.</p>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="about-visual">
+        <img src="img/yunshuo-qu-LtnC0fZ_b-Q-unsplash.jpg" alt="جزئیات فضای کافه اکسیژن" loading="lazy">
+        <div class="about-caption"><span>OXYGEN</span><span>YOUR LITTLE ESCAPE</span></div>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">MORE THAN JUST COFFEE</span>
+        <h2>جایی برای<br>نفس کشیدن در<br><em>میان شلوغی‌ها.</em></h2>
+        <p>ما باور داریم بعضی از بهترین لحظه‌های زندگی ساده‌اند؛ یک نوشیدنی دلخواه، گفت‌وگویی صمیمی یا چند دقیقه خلوت با خودت.</p>
+        <p>اکسیژن جایی است برای فاصله گرفتن از عجلهٔ روزمره و لذت بردن از همین لحظه.</p>
+        <a class="text-link" href="#contact">بیشتر با ما آشنا شو <span>←</span></a>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <span class="quote-mark">“</span>
+      <p>زندگی همیشه به یک اتفاق بزرگ نیاز ندارد؛<br>گاهی یک قهوهٔ خوب کافی است.</p>
+      <span class="quote-credit">A LITTLE MOMENT AT OXYGEN</span>
+    </section>
+
+    <section class="gallery-section section-pad" id="gallery">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">A GLIMPSE OF OXYGEN</span>
+          <h2>حس‌وحال <em>اکسیژن</em></h2>
         </div>
-    </div>
-
-    <div class="menu-card">
-        <img src="img/nguyen-phuc-hau-D556jNpHQ70-unsplash.jpg" alt="کیک شکلاتی">
-        <div class="menu-info">
-            <h3>کیک شکلاتی</h3>
-            <p>کیک شکلاتی تازه و خوشمزه در کنار قهوه.</p>
-            <span>۱۱۰,۰۰۰ تومان</span>
-        </div>
-    </div>
-
-</div>
-
-        
-
-</section>
-        <!-- ================= MENU ================= -->
-
-        <section class="menu-section" id="menu">
-
-            <div class="section-title">
-
-                <span>☘</span>
-
-                <h2>منوی کافه</h2>
-
-                <p>
-                    انتخاب کن، سفارش بده و از لحظه‌ات لذت ببر.
-                </p>
-
-            </div>
-
-
-            <div class="menu-categories">
-
-                <button class="category active">
-                    همه
-                </button>
-
-                <button class="category">
-                    قهوه
-                </button>
-
-                <button class="category">
-                    نوشیدنی
-                </button>
-
-                <button class="category">
-                    کیک و دسر
-                </button>
-
-            </div>
-
-
-            <div class="menu-items">
-
-
-                <!-- PRODUCT 1 -->
-
-                <article class="menu-card">
-
-                    <div class="product-image">
-                        <img src="img/espresso.jpg" alt="اسپرسو">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>اسپرسو</h3>
-
-                        <p>
-                            قهوه‌ای اصیل با عطر و طعم قوی
-                        </p>
-
-                        <strong>
-                            ۸۰,۰۰۰ تومان
-                        </strong>
-
-                    </div>
-
-                    <button class="add-cart">
-                        افزودن به سبد
-                    </button>
-
-                </article>
-
-
-                <!-- PRODUCT 2 -->
-
-                <article class="menu-card">
-
-                    <div class="product-image">
-                        <img src="img/latte.jpg" alt="لاته">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>لاته</h3>
-
-                        <p>
-                            ترکیب شیر و قهوه با طعمی نرم
-                        </p>
-
-                        <strong>
-                            ۱۲۰,۰۰۰ تومان
-                        </strong>
-
-                    </div>
-
-                    <button class="add-cart">
-                        افزودن به سبد
-                    </button>
-
-                </article>
-
-
-                <!-- PRODUCT 3 -->
-
-                <article class="menu-card">
-
-                    <div class="product-image">
-                        <img src="img/iced-coffee.jpg" alt="آیس کافی">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>آیس کافی</h3>
-
-                        <p>
-                            قهوه خنک مخصوص روزهای گرم
-                        </p>
-
-                        <strong>
-                            ۱۱۰,۰۰۰ تومان
-                        </strong>
-
-                    </div>
-
-                    <button class="add-cart">
-                        افزودن به سبد
-                    </button>
-
-                </article>
-
-
-                <!-- PRODUCT 4 -->
-
-                <article class="menu-card">
-
-                    <div class="product-image">
-                        <img src="img/green-tea.jpg" alt="چای سبز">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>چای سبز</h3>
-
-                        <p>
-                            آرامش در یک فنجان
-                        </p>
-
-                        <strong>
-                            ۷۰,۰۰۰ تومان
-                        </strong>
-
-                    </div>
-
-                    <button class="add-cart">
-                        افزودن به سبد
-                    </button>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section class="about-section" id="about">
-
-            
-<div class="about-content">
-
-    <div class="about-image">
-        <img src="img/hongjin-wang-xT5iOX893IU-unsplash.jpg" alt="فضای کافه اکسیژن">
-    </div>
-
-    <div class="about-text">
-        <p class="about-subtitle">درباره کافه اکسیژن</p>
-
-        <h2>جایی برای نفس کشیدن و لذت بردن</h2>
-
-        <p>
-            کافه اکسیژن جایی برای دور شدن از شلوغی‌های روزمره،
-            نوشیدن یک قهوه خوب و ساختن لحظه‌های به‌یادماندنی است.
-        </p>
-
-        <p>
-            ما تلاش می‌کنیم با قهوه‌های باکیفیت، فضای آرام
-            و برخورد صمیمی، تجربه‌ای متفاوت برای شما بسازیم.
-        </p>
-
-        <a href="#contact" class="about-btn">ارتباط با ما</a>
-    </div>
-
-</div>
-
-        </section>
-
-
-        <!-- ================= FEATURES ================= -->
-
-        <section class="features">
-
-            <div class="feature">
-
-                <span>☕</span>
-
-                <h3>قهوه با کیفیت</h3>
-
-                <p>
-                    دانه‌های تازه و انتخاب‌شده
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <span>🌿</span>
-
-                <h3>محیط آرام</h3>
-
-                <p>
-                    مناسب برای استراحت و کار
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <span>✨</span>
-
-                <h3>حال خوب</h3>
-
-                <p>
-                    تجربه‌ای متفاوت از کافه
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= GALLERY ================= -->
-
-        <section class="gallery-section" id="gallery">
-
-            <div class="section-title">
-    <p>گالری</p>
-    <h2>فضای کافه اکسیژن</h2>
-</div>
-
-<div class="gallery-container">
-
-    <div class="gallery-item">
-        <img src="img/yunshuo-qu-LtnC0fZ_b-Q-unsplash.jpg" alt="فضای کافه">
-    </div>
-
-    <div class="gallery-item">
-        <img src="img/skyler-smith-YzCnnBY3zAA-unsplash.jpg" alt="قهوه کافه">
-    </div>
-
-    <div class="gallery-item">
-        <img src="img/premium_photo-1674327105074-46dd8319164b.jpeg" alt="نوشیدنی کافه">
-    </div>
-
-    <div class="gallery-item">
-        <img src="img/nguyen-phuc-hau-D556jNpHQ70-unsplash.jpg" alt="محیط کافه">
-    </div>
-
-    <div class="gallery-item">
-        <img src="img/hongjin-wang-xT5iOX893IU-unsplash.jpg" alt="فضای داخلی کافه">
-    </div>
-
-</div>
-
-        </section>
-<section class="services" id="services">
-
-    <div class="section-title">
-        <p>خدمات ما</p>
-        <h2>چرا کافه اکسیژن؟</h2>
-    </div>
-
-    <div class="services-container">
-
-        <div class="service-card">
-            <div class="service-icon">☕</div>
-            <h3>قهوه باکیفیت</h3>
-            <p>
-                استفاده از دانه‌های باکیفیت برای یک فنجان قهوه
-                خوش‌عطر و دلچسب.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">📶</div>
-            <h3>وای‌فای رایگان</h3>
-            <p>
-                با خیال راحت بنشینید، کار کنید یا با دوستانتان
-                وقت بگذرانید.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🛋️</div>
-            <h3>فضای آرام</h3>
-            <p>
-                محیطی دنج و آرام برای استراحت، مطالعه و
-                دور شدن از شلوغی روزمره.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🥡</div>
-            <h3>سفارش بیرون‌بر</h3>
-            <p>
-                نوشیدنی و خوراکی مورد علاقه‌تان را سفارش دهید
-                و با خودتان ببرید.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- ================= CONTACT ================= -->
-
-        
-
-            <section class="contact" id="contact">
-
-    <div class="section-title">
-        <p>ارتباط با ما</p>
-        <h2>منتظر دیدنتون هستیم</h2>
-    </div>
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-
-            <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                    <h3>آدرس</h3>
-                    <p>تهران، مسعودیه، بلوار قائم، بین کوچه رضائی و نجف‌زاده</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div>
-                    <h3>شماره تماس</h3>
-                    <p>09931271317</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">🕐</div>
-                <div>
-                    <h3>ساعات کاری</h3>
-                    <p>هر روز از ۸ صبح تا ۱۲ شب</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="contact-message">
-            <h3>با ما در ارتباط باشید</h3>
-
-            <p>
-                برای اطلاع از منوی جدید، پیشنهادها و اخبار کافه
-                با ما در ارتباط باشید.
-            </p>
-
-            <div class="social-links">
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Telegram">Telegram</a>
-            </div>
-        </div>
-
-    </div>
-
-            
-        </section>
-
-    </main>
-
-
-    <!-- ================= CART ================= -->
-
-    <aside class="cart-panel">
-
-        <div class="cart-header">
-
-            <h2>سبد خرید</h2>
-
-            <button class="close-cart">
-                ×
-            </button>
-
-        </div>
-
-
-        <div class="cart-items">
-
-            <p class="empty-cart">
-                سبد خرید شما خالی است.
-            </p>
-
-        </div>
-
-
-        <div class="cart-footer">
-
-            <div class="cart-total">
-
-                <span>
-                    جمع کل
-                </span>
-
-                <strong>
-                    ۰ تومان
-                </strong>
-
-            </div>
-
-            <button class="checkout-btn">
-                تکمیل خرید 🛒
-            </button>
-
-        </div>
-
-    </aside>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-logo">
-
-            <span>🌿</span>
-
-            <h2>
-                OXYGEN
-            </h2>
-
-            <small>
-                CAFE
-            </small>
-
-        </div>
-
-
-        <p>
-            کافه اکسیژن؛ جایی برای نفس کشیدن.
-        </p>
-
-
-        <div class="footer-social">
-
-            <a href="#">Instagram</a>
-            <a href="#">Telegram</a>
-
-        </div>
-
-
-        <div class="copyright">
-
-            © 2026 Oxygen Cafe
-            <br>
-            تمامی حقوق محفوظ است.
-
-        </div>
-
-    </footer>
-
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <script src="script.js"></script>
-
+        <p>جزئیات کوچک، حس‌های بزرگ.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-tall">
+          <img src="img/skyler-smith-YzCnnBY3zAA-unsplash.jpg" alt="گوشه‌ای از فضای کافه" loading="lazy">
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/hongjin-wang-xT5i0X893IU-unsplash.jpg" alt="لحظه‌ای برای نوشیدن قهوه" loading="lazy">
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/premium_photo-1674327105074-46dd8319164b.jpeg" alt="قهوه با عطر و طعم دلنشین" loading="lazy">
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/nguyen-phuc-hau-D556jNpHQ70-unsplash.jpg" alt="جزئیات قهوه و کافه" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="contact-copy">
+        <span class="eyebrow">COME SAY HELLO</span>
+        <h2>فنجانت رو<br>اینجا <em>بنوش.</em></h2>
+        <p>برای یک قهوهٔ خوب و چند دقیقه آرامش، منتظرت هستیم.</p>
+      </div>
+      <div class="contact-details">
+        <div class="contact-row"><span>آدرس</span><p>تهران، مسعودیه</p></div>
+        <div class="contact-row"><span>سفارش و پرسش</span><p>برای دریافت اطلاعات، مستقیماً با کافه تماس بگیرید.</p></div>
+        <a class="button button-gold" href="#menu">دیدن منو <span>↙</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top">
+      <span class="brand-mark">O</span>
+      <span class="brand-copy"><strong>اکسیژن</strong><small>OXYGEN CAFE</small></span>
+    </a>
+    <p>یک نفس عمیق؛ یک فنجان قهوه.</p>
+    <a class="back-top" href="#top">بازگشت به بالا ↑</a>
+    <span class="copyright">© OXYGEN CAFE</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
-                  </html>
+          </html>
